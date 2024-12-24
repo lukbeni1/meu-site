@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para o Amor da Minha Vida</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    .intro {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin: 0;
+      animation: heartbeat 2s infinite;
+    }
+
+    .intro p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      animation: fadeIn 5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(0.9); }
+    }
+
+    .gallery-section {
+      background: #ff758c;
+      padding: 50px 20px;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .gallery img {
+      width: 400px;
+      height: 400px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .quote-section {
+      background: linear-gradient(to bottom, #fad0c4, #ff9a9e);
+    }
+
+    .quotes {
+      font-size: 1.8rem;
+      margin-top: 20px;
+      animation: fadeQuotes 10s infinite;
+    }
+
+    @keyframes fadeQuotes {
+      0%, 20% { opacity: 0; transform: translateY(20px); }
+      25%, 45% { opacity: 1; transform: translateY(0); }
+      50%, 95% { opacity: 0; transform: translateY(-20px); }
+    }
+
+	.header {
+	  text-align: left;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      font-size: 1.2rem;
+      color: white;
+    }
+	
+    footer {
+      background: #ff516b;
+      color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+	<div class="header">
+    <a href="index.html.html">Voltar à página inicial</a>
+  </div>
+  <!-- Introdução -->
+  <section class="intro">
+    <h1>Para Você, Meu Amor ❤️</h1>
+    <p>Você é a razão de cada batida do meu coração. <br>(da scroll no rato) </p>
+  </section>
+
+  <!-- Galeria -->
+   <section class="gallery-section">
+    <h2>Nossos Momentos Especiais</h2>
+    <div class="gallery">
+      <img src="amor1.jpg.jpg" alt="Momento 1">
+      <img src="amor2.jpg.jpg" alt="Momento 2">
+      <img src="amor3.jpg.jpg" alt="Momento 3">
+      <img src="amor4.jpg.jpg" alt="Momento 4">
+    </div>
+  </section>
+
+  <!-- Frases Românticas -->
+  <section class="quote-section">
+    <h2>Palavras que vêm do coração</h2>
+    <div class="quotes" id="quoteContainer">
+      <span>"Te amar é o meu destino."</span>
+      <span>"Você é o meu melhor capítulo."</span>
+      <span>"Com você, eu sou a melhor versão de mim."</span>
+      <span>"Meu amor por você é infinito."</span>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    Feito com todo o amor do mundo, especialmente para você. ❤️
+  </footer>
+
+  <script>
+    const quotes = [
+      '"Te amar é o meu destino."',
+      '"Você é o meu melhor capítulo."',
+      '"Com você, eu sou a melhor versão de mim."',
+      '"Meu amor por você é infinito."'
+    ];
+
+    let index = 0;
+    const quoteContainer = document.getElementById('quoteContainer');
+
+    function changeQuote() {
+      const quote = quotes[index];
+      quoteContainer.innerHTML = `<span>${quote}</span>`;
+      index = (index + 1) % quotes.length;
+    }
+
+    setInterval(changeQuote, 5000); // Alterna as frases a cada 5 segundos
+  </script>
+</body>
+</html>
